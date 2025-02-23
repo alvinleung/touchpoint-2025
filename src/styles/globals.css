@@ -3,19 +3,49 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+    --wallet-green: #c8ff00;
+    --good-red: #ff0000;
+    --black: #000000;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+    --color-main: var(--wallet-green);
+    --color-inverted: var(--black);
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--color-main);
+    color: var(--color-inverted);
+}
+
+.color-scheme-green {
+    --color-main: var(--wallet-green);
+    --color-inverted: var(--black);
+}
+
+.color-scheme-red {
+    --color-main: var(--good-red);
+    --color-inverted: var(--wallet-green);
+}
+
+.text-smol-serif {
+    @apply font-serif tracking-[-0.04em] leading-[.98em] text-[14px];
+}
+
+.text-big-serif {
+    @apply font-serif tracking-[-0.04em] leading-[.98em] text-[4vw];
+}
+
+.text-big-sans {
+    @apply font-sans tracking-[-0.04em] leading-[.98em] text-[4vw];
+}
+
+.text-more-big-sans {
+    @apply font-sans tracking-[-0.04em] leading-[.98em] text-[5vw];
+}
+.text-huge-sans {
+    @apply font-sans tracking-[-0.08em] leading-none text-[13vw] font-light -ml-[.05em];
+}
+
+.text-label {
+    @apply uppercase tracking-[.21em] text-xs font-bold font-mono;
 }

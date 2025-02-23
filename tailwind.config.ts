@@ -8,9 +8,19 @@ export default {
   ],
   theme: {
     extend: {
+      padding: {
+        body: "32px",
+        "nav-height": "57px",
+      },
+      margin: {
+        body: "32px",
+        "nav-height": "57px",
+      },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        "wallet-green": "var(--wallet-green)",
+        "good-red": "var(--good-red)",
+        main: "var(--color-main)",
+        inverted: "var(--color-inverted)",
       },
     },
   },
