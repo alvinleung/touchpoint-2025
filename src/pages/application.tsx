@@ -1,9 +1,9 @@
-import { useColorScheme } from "@/hooks/useColorScheme";
+import { getPageColorSchemeProps } from "@/utils/getPageColorSchemeProps";
 import React from "react";
 
-const Application = () => {
-  useColorScheme("red");
+export const getServerSideProps = getPageColorSchemeProps("red");
 
+const Application = () => {
   return (
     <div className="px-body mt-nav-height pt-nav-height">
       <div className="flex flex-col gap-[1em] text-more-big-sans text-justify mb-24">

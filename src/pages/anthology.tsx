@@ -1,5 +1,5 @@
 import QUOTES from "@/data/quotes";
-import { useColorScheme } from "@/hooks/useColorScheme";
+import { getPageColorSchemeProps } from "@/utils/getPageColorSchemeProps";
 import {
   motion,
   useMotionValueEvent,
@@ -22,9 +22,9 @@ function getCurrentColorScheme() {
   return document.body.classList.contains("color-scheme-red") ? "red" : "green";
 }
 
-const Application = () => {
-  useColorScheme("red");
+export const getServerSideProps = getPageColorSchemeProps("red");
 
+const Application = () => {
   return (
     <div className="">
       <div className="px-body justify-center flex flex-col gap-[1em] h-screen text-more-big-sans text-justify">

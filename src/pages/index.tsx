@@ -1,7 +1,8 @@
-import { useColorScheme } from "@/hooks/useColorScheme";
+import { getPageColorSchemeProps } from "@/utils/getPageColorSchemeProps";
+
+export const getServerSideProps = getPageColorSchemeProps("green");
 
 export default function Home() {
-  useColorScheme("green");
   return (
     <div className="px-body pt-nav-height min-h-screen mt-nav-height">
       <div className="md:ml-[36%] text-big-serif flex flex-col gap-[1em] indent-[3ch]">

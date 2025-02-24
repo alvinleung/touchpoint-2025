@@ -1,9 +1,10 @@
 import React from "react";
 import LEGACY_SPEAKERS from "@/data/legacySpeakers";
-import { useColorScheme } from "@/hooks/useColorScheme";
+import { getPageColorSchemeProps } from "@/utils/getPageColorSchemeProps";
+
+export const getServerSideProps = getPageColorSchemeProps("green");
 
 const Legacy = () => {
-  useColorScheme("green");
   return (
     <div className="px-body pt-nav-height min-h-screen">
       <div className="text-big-serif text-justify flex flex-col gap-[1em] mt-nav-height">

@@ -1,10 +1,10 @@
 import React, { Fragment } from "react";
 import SCHEDULE from "@/data/schedule";
-import { useColorScheme } from "@/hooks/useColorScheme";
+import { getPageColorSchemeProps } from "@/utils/getPageColorSchemeProps";
+
+export const getServerSideProps = getPageColorSchemeProps("red");
 
 const Schedule = () => {
-  useColorScheme("red");
-
   return (
     <div className="px-body pt-nav-height min-h-screen">
       <div

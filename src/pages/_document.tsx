@@ -1,10 +1,13 @@
-import { Html, Head, Main, NextScript } from "next/document";
+import { Html, Head, Main, NextScript, DocumentProps } from "next/document";
 
-export default function Document() {
+export default function Document(props: DocumentProps) {
+  const { pageProps } = props.__NEXT_DATA__.props;
+  const bodyClass = pageProps?.bodyClass || ""; // Get the class from page props
+
   return (
     <Html lang="en">
       <Head />
-      <body className="antialiased">
+      <body className={`antialiased ${bodyClass}`}>
         <Main />
         <NextScript />
       </body>
