@@ -21,13 +21,13 @@ const Legacy = () => {
       </div>
       {/* Legacy grid */}
       <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6 mt-[20vh]">
-        {LEGACY_SPEAKERS.map((speaker) => (
-          <LegacyGridItem key={speaker.year} year={speaker.year}>
-            {speaker.speakers.map((speaker) => (
-              <Person
-                key={speaker.name}
-                name={speaker.name}
-                company={speaker.company}
+        {LEGACY_SPEAKERS.map((event) => (
+          <LegacyGridItem key={event.year} year={event.year}>
+            {event.talks.map((talk, index) => (
+              <Talk
+                key={index}
+                name={talk.speakers}
+                company={talk.company}
               />
             ))}
           </LegacyGridItem>
@@ -54,7 +54,7 @@ const LegacyGridItem = ({
   );
 };
 
-const Person = ({ name, company }: { name: string; company: string }) => {
+const Talk = ({ name, company }: { name: string; company: string }) => {
   return (
     <>
       <span>{name}</span>
