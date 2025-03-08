@@ -11,12 +11,6 @@
     --color-inverted: var(--black);
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: var(--color-main);
-    color: var(--color-inverted);
-}
-
 .color-scheme-green {
     --color-main: var(--wallet-green);
     --color-inverted: var(--black);
@@ -25,6 +19,22 @@ body {
 .color-scheme-red {
     --color-main: var(--good-red);
     --color-inverted: var(--wallet-green);
+}
+
+/* margin */
+:root {
+    --body-padding: 16px;
+}
+@media only screen and (min-width: 1000px) {
+    :root {
+        --body-padding: 32px;
+    }
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--color-main);
+    color: var(--color-inverted);
 }
 
 .text-smol-serif {
@@ -37,6 +47,10 @@ body {
 
 .text-big-sans {
     @apply font-sans tracking-[-0.04em] leading-[.98em] text-[4vw];
+}
+
+.text-big-sans-static {
+    @apply font-sans tracking-[-0.04em] leading-[.98em] text-5xl sm:text-7xl lg:text-8xl;
 }
 
 .text-more-big-sans {

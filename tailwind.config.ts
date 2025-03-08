@@ -8,12 +8,16 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        serif: "Times New Roman",
+        // sans: "Helvetica",
+      },
       padding: {
-        body: "32px",
+        body: "var(--body-padding)",
         "nav-height": "57px",
       },
       margin: {
-        body: "32px",
+        body: "var(--body-padding)",
         "nav-height": "57px",
       },
       colors: {
