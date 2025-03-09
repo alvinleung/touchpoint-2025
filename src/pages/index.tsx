@@ -11,13 +11,15 @@ import {
   useTransform,
 } from "framer-motion";
 import useDocumentHeight from "@/hooks/useDocumentHeight";
-import { useWindowSize } from "usehooks-ts";
+import { useDocumentTitle, useWindowSize } from "usehooks-ts";
 import { PillNav, PillNavItem } from "@/components/PillNav";
 import { useEffect, useState } from "react";
 
 export const getServerSideProps = getPageColorSchemeProps("green");
 
 export default function Home() {
+  useDocumentTitle("Touchpoint 2025");
+
   const { scrollY } = useScroll();
   const { height } = useWindowSize();
   const docHeight = useDocumentHeight();
