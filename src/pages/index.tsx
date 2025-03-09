@@ -13,7 +13,7 @@ import {
 import useDocumentHeight from "@/hooks/useDocumentHeight";
 import { useWindowSize } from "usehooks-ts";
 import { PillNav, PillNavItem } from "@/components/PillNav";
-import { useEffect, useLayoutEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 export const getServerSideProps = getPageColorSchemeProps("green");
 
