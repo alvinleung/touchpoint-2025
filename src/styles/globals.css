@@ -5,6 +5,8 @@
 :root {
     --wallet-green: #c8ff00;
     --good-red: #ff0000;
+    --bianchi-blue: #4603ff;
+    --idk-teal: #02f9fd;
     --black: #000000;
 
     --color-main: var(--wallet-green);

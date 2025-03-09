@@ -23,6 +23,8 @@ export default {
       colors: {
         "wallet-green": "var(--wallet-green)",
         "good-red": "var(--good-red)",
+        "bianchi-blue": "var(--bianchi-blue)",
+        "idk-teal": "var(--idk-teal)",
         main: "var(--color-main)",
         inverted: "var(--color-inverted)",
       },

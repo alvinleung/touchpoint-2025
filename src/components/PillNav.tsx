@@ -21,7 +21,7 @@ export const PillNavItem = ({
   outline,
   isInitial,
 }: React.PropsWithChildren & { outline?: boolean; isInitial?: boolean }) => {
-  const redStyle = "bg-good-red text-wallet-green";
+  const redStyle = "hover:bg-bianchi-blue bg-good-red text-wallet-green";
   const outlineStyle = "border-2 border-black text-black bg-wallet-green";
 
   const rand = useMemo(() => Math.random(), []);
