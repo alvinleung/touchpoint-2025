@@ -41,23 +41,22 @@ body {
     @apply font-serif tracking-[-0.04em] leading-[.98em] text-[14px];
 }
 
+.text-mid-serif {
+    @apply font-serif tracking-[-0.04em] leading-[.98em] text-2xl md:text-[3vw];
+}
 .text-big-serif {
-    @apply font-serif tracking-[-0.04em] leading-[.98em] text-[4vw];
+    @apply font-serif tracking-[-0.04em] leading-[.98em] text-2xl md:text-[4vw];
 }
 
 .text-big-sans {
-    @apply font-sans tracking-[-0.04em] leading-[.98em] text-[4vw];
-}
-
-.text-big-sans-static {
-    @apply font-sans tracking-[-0.04em] leading-[.98em] text-5xl sm:text-7xl lg:text-8xl;
+    @apply font-sans tracking-[-0.04em] leading-[.98em] text-5xl md:text-[4vw];
 }
 
 .text-more-big-sans {
     @apply font-sans tracking-[-0.04em] leading-[.98em] text-[5vw];
 }
 .text-huge-sans {
-    @apply font-sans tracking-[-0.08em] leading-none text-[13vw] font-light -ml-[.05em];
+    @apply font-sans tracking-[-0.08em] leading-none text-[9vw];
 }
 
 .text-label {

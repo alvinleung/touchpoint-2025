@@ -2,7 +2,7 @@ import React from "react";
 
 const Navigation = () => {
   return (
-    <nav className="fixed z-30 top-0 left-0 right-0 backdrop-blur-2xl">
+    <nav className="fixed z-30 top-0 left-0 right-0 backdrop-blur-lg">
       <div
         className="flex items-baseline mx-body py-3 border-b-[0.5px] border-b-inverted"
         style={{
