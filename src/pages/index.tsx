@@ -30,7 +30,7 @@ export default function Home() {
   const blurAmount = useTransform(
     scrollY,
     [blurEnterBegin, blurEnterEnd, blurExitBegin, blurExitEnd],
-    [0, 30, 30, 0],
+    [0, 11, 11, 0],
   );
   const scale = useTransform(
     scrollY,
