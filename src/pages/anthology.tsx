@@ -55,7 +55,6 @@ const QuoteCard = ({
   author: string;
 }) => {
   const ref = useRef(null);
-  // const isInView = useInView(ref, { margin: "-90%" });
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "end start"],
