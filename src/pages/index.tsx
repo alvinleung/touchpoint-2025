@@ -4,9 +4,16 @@ import { cn } from "@/utils/cn";
 
 import { getPageColorSchemeProps } from "@/utils/getPageColorSchemeProps";
 import Logo from "@/assets/logo.svg";
-import { motion, useScroll, useTransform } from "framer-motion";
+import {
+  motion,
+  useMotionValueEvent,
+  useScroll,
+  useTransform,
+} from "framer-motion";
 import useDocumentHeight from "@/hooks/useDocumentHeight";
 import { useWindowSize } from "usehooks-ts";
+import { PillNav, PillNavItem } from "@/components/PillNav";
+import { useEffect, useLayoutEffect, useState } from "react";
 
 export const getServerSideProps = getPageColorSchemeProps("green");
 
@@ -32,6 +39,29 @@ export default function Home() {
   );
   const blur = useTransform(blurAmount, (amount) => `blur(${amount}px)`);
 
+  const [shouldShowPillNav, setShouldShowPillNav] = useState(false);
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setShouldShowPillNav(true);
+    }, 1200);
+
+    return () => clearTimeout(timeout);
+  }, []);
+
+  useMotionValueEvent(scrollY, "change", () => {
+    const prev = scrollY.getPrevious();
+    const isScrollingDown = prev && scrollY.get() > prev ? true : false;
+    if (
+      scrollY.get() < 0 ||
+      scrollY.get() > blurExitBegin ||
+      !isScrollingDown
+    ) {
+      setShouldShowPillNav(true);
+    } else {
+      setShouldShowPillNav(false);
+    }
+  });
+
   const fullScreenStyle = "min-h-screen flex items-center justify-center";
   const blueSectionStyle = "mix-blend-difference bg-white text-black";
   const greenSectionStyle = "mix-blend-exclusion text-wallet-green";
@@ -41,9 +71,33 @@ export default function Home() {
 
   return (
     <div className="">
+      <PillNav isVisible={shouldShowPillNav}>
+        <PillNavItem>Get Tickets</PillNavItem>
+        <PillNavItem outline>2025.03.22</PillNavItem>
+        <PillNavItem outline>SFU Surrey Engineering Building</PillNavItem>
+        <PillNavItem>See Schedule</PillNavItem>
+        <PillNavItem>Submit Questions</PillNavItem>
+        <PillNavItem>Mock Interviews</PillNavItem>
+      </PillNav>
       <div className="sticky -z-10 inset-0 flex justify-center items-center w-full h-screen">
-        <motion.div style={{ filter: blur, scale }}>
-          <Logo className="max-w-full" width="100%" viewBox="0 0 680 270" />
+        <motion.div
+          initial={{ scale: 1.2, filter: "blur(50px)", opacity: 0 }}
+          animate={{
+            scale: 1,
+            filter: "blur(0px)",
+            opacity: 1,
+            transition: {
+              duration: 2,
+              transition: {
+                duration: 0.5,
+                ease: [0.22, 1, 0.36, 1],
+              },
+            },
+          }}
+        >
+          <motion.div style={{ filter: blur, scale }}>
+            <Logo className="max-w-full" width="100%" viewBox="0 0 680 270" />
+          </motion.div>
         </motion.div>
       </div>
       <div

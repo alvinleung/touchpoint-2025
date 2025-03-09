@@ -1,8 +1,20 @@
+import { motion } from "framer-motion";
 import React from "react";
 
 const Navigation = () => {
   return (
-    <nav className="fixed z-30 top-0 left-0 right-0 backdrop-blur-lg">
+    <motion.nav
+      initial={{ y: -100 }}
+      animate={{
+        y: 0,
+        transition: {
+          duration: 2,
+          delay: 0.1,
+          ease: [0.09, 0.59, 0.21, 1],
+        },
+      }}
+      className="fixed z-30 top-0 left-0 right-0 backdrop-blur-lg"
+    >
       <div
         className="flex items-baseline mx-body py-3 border-b-[0.5px] border-b-inverted"
         style={{
@@ -15,7 +27,7 @@ const Navigation = () => {
           <span className="max-sm:hidden">An anthology of</span> quotations
         </div>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 

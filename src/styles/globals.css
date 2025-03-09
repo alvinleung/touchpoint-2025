@@ -41,6 +41,10 @@ body {
     @apply font-serif tracking-[-0.04em] leading-[.98em] text-[14px];
 }
 
+.text-base-sans {
+    @apply font-serif tracking-[-0.04em] leading-[.98em] text-base;
+}
+
 .text-mid-serif {
     @apply font-serif tracking-[-0.04em] leading-[.98em] text-2xl md:text-[3vw];
 }
