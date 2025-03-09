@@ -1,9 +1,11 @@
 import { getPageColorSchemeProps } from "@/utils/getPageColorSchemeProps";
 import React from "react";
+import { useDocumentTitle } from "usehooks-ts";
 
 export const getServerSideProps = getPageColorSchemeProps("red");
 
 const Application = () => {
+  useDocumentTitle("Touchpoint 2025");
   return (
     <div className="px-body mt-nav-height pt-nav-height">
       <div className="flex flex-col gap-[1em] text-more-big-sans text-justify mb-24">

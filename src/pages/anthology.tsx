@@ -7,6 +7,7 @@ import {
   useTransform,
 } from "framer-motion";
 import React, { useRef } from "react";
+import { useDocumentTitle } from "usehooks-ts";
 
 function toggleColorScheme() {
   if (document.body.classList.contains("color-scheme-red")) {
@@ -25,6 +26,7 @@ function getCurrentColorScheme() {
 export const getServerSideProps = getPageColorSchemeProps("red");
 
 const Application = () => {
+  useDocumentTitle("Touchpoint 2025");
   return (
     <div className="">
       <div className="px-body justify-center flex flex-col gap-[1em] h-screen text-more-big-sans text-justify">

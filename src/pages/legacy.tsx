@@ -1,10 +1,12 @@
 import React from "react";
 import LEGACY_SPEAKERS from "@/data/legacySpeakers";
 import { getPageColorSchemeProps } from "@/utils/getPageColorSchemeProps";
+import { useDocumentTitle } from "usehooks-ts";
 
 export const getServerSideProps = getPageColorSchemeProps("green");
 
 const Legacy = () => {
+  useDocumentTitle("Touchpoint 2025");
   return (
     <div className="px-body pt-nav-height min-h-screen">
       <div className="text-big-serif text-justify flex flex-col gap-[1em] mt-nav-height">
@@ -24,11 +26,7 @@ const Legacy = () => {
         {LEGACY_SPEAKERS.map((event) => (
           <LegacyGridItem key={event.year} year={event.year}>
             {event.talks.map((talk, index) => (
-              <Talk
-                key={index}
-                name={talk.speakers}
-                company={talk.company}
-              />
+              <Talk key={index} name={talk.speakers} company={talk.company} />
             ))}
           </LegacyGridItem>
         ))}

@@ -1,10 +1,13 @@
 import React, { Fragment } from "react";
 import SCHEDULE from "@/data/schedule";
 import { getPageColorSchemeProps } from "@/utils/getPageColorSchemeProps";
+import { useDocumentTitle } from "usehooks-ts";
 
 export const getServerSideProps = getPageColorSchemeProps("red");
 
 const Schedule = () => {
+  useDocumentTitle("Touchpoint 2025");
+
   return (
     <div className="px-body pt-nav-height min-h-screen">
       <div
