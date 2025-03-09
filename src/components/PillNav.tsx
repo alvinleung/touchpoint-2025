@@ -1,5 +1,6 @@
 import { cn } from "@/utils/cn";
 import { AnimatePresence, motion } from "framer-motion";
+import Link from "next/link";
 import React, { useMemo } from "react";
 
 export const PillNav = ({
@@ -16,18 +17,29 @@ export const PillNav = ({
   );
 };
 
+const MotionLink = motion.create(Link);
+
 export const PillNavItem = ({
   children,
   outline,
+  href = "/",
   isInitial,
-}: React.PropsWithChildren & { outline?: boolean; isInitial?: boolean }) => {
+  target = "_self",
+}: React.PropsWithChildren & {
+  outline?: boolean;
+  isInitial?: boolean;
+  href?: string;
+  target?: string;
+}) => {
   const redStyle = "hover:bg-bianchi-blue bg-good-red text-wallet-green";
   const outlineStyle = "border-2 border-black text-black bg-wallet-green";
 
   const rand = useMemo(() => Math.random(), []);
 
   return (
-    <motion.a
+    <MotionLink
+      href={href}
+      target={target}
       initial={{
         y: rand * 100 + 200,
         scale: 1.5,
@@ -78,6 +90,6 @@ export const PillNavItem = ({
       )}
     >
       {children}
-    </motion.a>
+    </MotionLink>
   );
 };

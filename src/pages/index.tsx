@@ -77,9 +77,9 @@ export default function Home() {
         <PillNavItem>Get Tickets</PillNavItem>
         <PillNavItem outline>2025.03.22</PillNavItem>
         <PillNavItem outline>SFU Surrey Engineering Building</PillNavItem>
-        <PillNavItem>See Schedule</PillNavItem>
+        <PillNavItem href="/schedule">See Schedule</PillNavItem>
         <PillNavItem>Submit Questions</PillNavItem>
-        <PillNavItem>Mock Interviews</PillNavItem>
+        <PillNavItem href="/application">Mock Interviews</PillNavItem>
       </PillNav>
       <div className="sticky -z-10 inset-0 flex justify-center items-center w-full h-screen">
         <motion.div
