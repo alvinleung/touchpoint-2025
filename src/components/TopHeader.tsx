@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Link from "next/link";
 import React from "react";
 
 const TopHeader = () => {
@@ -21,13 +22,21 @@ const TopHeader = () => {
           transition: "all .15s linear",
         }}
       >
-        <div className="uppercase tracking-widest text-xs md:w-60">
+        <Link
+          href="/legacy"
+          className="uppercase tracking-widest text-xs md:w-60"
+        >
           Since 2012
-        </div>
-        <div className="mx-auto text-lg font-serif">Touchpoint 2025</div>
-        <div className="uppercase tracking-widest text-xs md:w-60 text-right">
+        </Link>
+        <Link href="/" className="mx-auto text-lg font-serif">
+          Touchpoint 2025
+        </Link>
+        <Link
+          href="/anthology"
+          className="uppercase tracking-widest text-xs md:w-60 text-right"
+        >
           <span className="max-md:hidden">An anthology of</span> quotations
-        </div>
+        </Link>
       </div>
     </motion.nav>
   );
