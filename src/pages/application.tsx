@@ -7,7 +7,7 @@ export const getServerSideProps = getPageColorSchemeProps("red");
 const Application = () => {
   useDocumentTitle("Touchpoint 2025");
   return (
-    <div className="px-body mt-nav-height pt-nav-height mb-24">
+    <div className="px-body mt-nav-height pt-nav-height pb-32 min-h-screen">
       <div className="flex flex-col gap-[1em] text-more-big-sans text-justify mb-24">
         <p>
           This year we have industry mentors providing feedback and insights in
@@ -23,7 +23,7 @@ const Application = () => {
       </div>
       <a
         href="https://docs.google.com/forms/d/e/1FAIpQLSfx4DzZFHuhMMJiyitBhUDEWk5pmNwqQ-ggeZ1nsJKOKgqFHw/viewform"
-        target="_blank"
+        target="_blankschedule"
         className="bg-inverted text-main px-8 py-4 rounded-full uppercase tracking-[.21em] text-sm font-bold"
       >
         Apply for Mock Interview

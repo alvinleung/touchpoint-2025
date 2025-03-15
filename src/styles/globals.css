@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  overscroll-behavior: none;
+}
 :root {
   --wallet-green: #c8ff00;
   --good-red: #ff0000;
@@ -26,7 +29,7 @@
   --color-nav: var(--wallet-green);
 }
 
-.color-scheme-weirld-blend-blue {
+.color-scheme-blue {
   --color-main: var(--wallet-green);
   --color-nav: var(--black);
   --color-inverted: var(--wallet-green);

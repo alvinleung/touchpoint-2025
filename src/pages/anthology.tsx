@@ -1,5 +1,6 @@
 import QUOTES from "@/data/quotes";
 import { getPageColorSchemeProps } from "@/utils/getPageColorSchemeProps";
+import { getCurrentColorScheme, toggleColorScheme } from "@/utils/theme";
 import {
   motion,
   useMotionValueEvent,
@@ -8,20 +9,6 @@ import {
 } from "framer-motion";
 import React, { useRef } from "react";
 import { useDocumentTitle } from "usehooks-ts";
-
-function toggleColorScheme() {
-  if (document.body.classList.contains("color-scheme-red")) {
-    document.body.classList.remove("color-scheme-red");
-    document.body.classList.add("color-scheme-green");
-  } else {
-    document.body.classList.remove("color-scheme-green");
-    document.body.classList.add("color-scheme-red");
-  }
-}
-
-function getCurrentColorScheme() {
-  return document.body.classList.contains("color-scheme-red") ? "red" : "green";
-}
 
 export const getServerSideProps = getPageColorSchemeProps("red");
 
@@ -65,7 +52,7 @@ const QuoteCard = ({
   const borderRadius = useTransform(
     scrollYProgress,
     [0, 0.4, 0.6, 1],
-    ["30vw", "0vw", "0vw", "30vw"],
+    ["30vw", "0vw", "0vw", "30vw"]
   );
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
@@ -95,7 +82,9 @@ const QuoteCard = ({
         <div className={`flex flex-col sm:flex-row gap-4 items-start`}>
           <p className="text-label sm:min-w-[20vw] mt-[.1em]">{author}</p>
           <p
-            className={`${colorScheme === "red" ? "text-big-sans" : "text-big-serif"}`}
+            className={`${
+              colorScheme === "red" ? "text-big-sans" : "text-big-serif"
+            }`}
           >
             {quote}
           </p>
