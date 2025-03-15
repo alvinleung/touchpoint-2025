@@ -12,7 +12,6 @@ export const nimbusFont = localFont({
       weight: "700",
       style: "normal",
     },
-    // Add other weights/styles as needed
   ],
   variable: "--font-nimbus",
 });

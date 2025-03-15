@@ -74,14 +74,19 @@ export default function Home() {
   return (
     <div>
       <PillNav isVisible={shouldShowPillNav}>
-        <PillNavItem>Get Tickets</PillNavItem>
+        <PillNavItem
+          target="blank"
+          href="https://www.eventbrite.ca/e/touchpoint-design-conference-tickets-1235853032689?aff=oddtdtcreator"
+        >
+          Get Tickets
+        </PillNavItem>
         <PillNavItem outline>2025.03.22</PillNavItem>
         <PillNavItem outline>SFU Surrey Engineering Building</PillNavItem>
         <PillNavItem href="/schedule">See Schedule</PillNavItem>
         <PillNavItem>Submit Questions</PillNavItem>
         <PillNavItem href="/application">Mock Interviews</PillNavItem>
       </PillNav>
-      <div className="sticky -z-10 inset-0 flex justify-center items-center w-full h-screen">
+      <div className="sticky inset-0 flex justify-center items-center w-full h-screen">
         <motion.div
           initial={{ scale: 1.2, filter: "blur(50px)", opacity: 0 }}
           animate={{

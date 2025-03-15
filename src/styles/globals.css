@@ -3,68 +3,68 @@
 @tailwind utilities;
 
 :root {
-    --wallet-green: #c8ff00;
-    --good-red: #ff0000;
-    --bianchi-blue: #4603ff;
-    --idk-teal: #02f9fd;
-    --black: #000000;
+  --wallet-green: #c8ff00;
+  --good-red: #ff0000;
+  --bianchi-blue: #4603ff;
+  --idk-teal: #02f9fd;
+  --black: #000000;
 
-    --color-main: var(--wallet-green);
-    --color-inverted: var(--black);
+  --color-main: var(--wallet-green);
+  --color-inverted: var(--black);
 }
 
 .color-scheme-green {
-    --color-main: var(--wallet-green);
-    --color-inverted: var(--black);
+  --color-main: var(--wallet-green);
+  --color-inverted: var(--black);
 }
 
 .color-scheme-red {
-    --color-main: var(--good-red);
-    --color-inverted: var(--wallet-green);
+  --color-main: var(--good-red);
+  --color-inverted: var(--wallet-green);
 }
 
 /* margin */
 :root {
-    --body-padding: 16px;
+  --body-padding: 16px;
 }
 @media only screen and (min-width: 1000px) {
-    :root {
-        --body-padding: 32px;
-    }
+  :root {
+    --body-padding: 32px;
+  }
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: var(--color-main);
-    color: var(--color-inverted);
-}
+/* body {
+  font-family: var(--font-nimbus);
+  background: var(--color-main);
+  color: var(--color-inverted);
+} */
 
 .text-smol-serif {
-    @apply font-serif tracking-[-0.04em] leading-[.98em] text-[14px];
+  @apply font-serif tracking-[-0.04em] leading-[.98em] text-[14px];
 }
 
 .text-base-sans {
-    @apply font-serif tracking-[-0.04em] leading-[.98em] text-base;
+  @apply font-serif tracking-[-0.04em] leading-[.98em] text-base;
 }
 
 .text-mid-serif {
-    @apply font-serif tracking-[-0.04em] leading-[.98em] text-2xl md:text-[3vw];
+  @apply font-serif tracking-[-0.04em] leading-[.98em] text-2xl md:text-[3vw];
 }
 .text-big-serif {
-    @apply font-serif tracking-[-0.04em] leading-[.98em] text-2xl md:text-[4vw];
+  @apply font-serif tracking-[-0.04em] leading-[.98em] text-2xl md:text-[4vw];
 }
 
 .text-big-sans {
-    @apply font-sans tracking-[-0.04em] leading-[.98em] text-5xl md:text-[4vw];
+  @apply font-sans tracking-[-0.04em] leading-[.98em] text-5xl md:text-[4vw];
 }
 
 .text-more-big-sans {
-    @apply font-sans tracking-[-0.04em] leading-[.98em] text-[5vw];
+  @apply font-sans tracking-[-0.04em] leading-[.98em] text-[5vw];
 }
 .text-huge-sans {
-    @apply font-sans tracking-[-0.08em] leading-none text-[9vw];
+  @apply font-sans tracking-[-0.08em] leading-none text-[9vw];
 }
 
 .text-label {
-    @apply uppercase tracking-[.21em] text-xs font-bold font-mono;
+  @apply uppercase tracking-[.21em] text-xs font-bold font-mono;
 }
