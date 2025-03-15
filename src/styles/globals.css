@@ -55,7 +55,7 @@
 }
 
 .text-big-sans {
-  @apply font-sans tracking-[-0.04em] leading-[.98em] text-5xl md:text-[4vw];
+  @apply font-sans tracking-[-0.04em] leading-[.98em] text-xl md:text-[4vw];
 }
 
 .text-more-big-sans {

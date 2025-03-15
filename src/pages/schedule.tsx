@@ -9,7 +9,7 @@ const Schedule = () => {
   useDocumentTitle("Touchpoint 2025");
 
   return (
-    <div className="px-body pt-nav-height min-h-screen">
+    <div className="px-body pt-nav-height min-h-screen pb-24">
       <div
         className="grid text-big-sans gap-x-4 gap-y-[1em] mt-[1em]"
         style={{
