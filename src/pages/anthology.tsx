@@ -52,7 +52,7 @@ const QuoteCard = ({
   const borderRadius = useTransform(
     scrollYProgress,
     [0, 0.4, 0.6, 1],
-    ["30vw", "0vw", "0vw", "30vw"]
+    ["50vw", "0vw", "0vw", "50vw"]
   );
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
@@ -66,8 +66,8 @@ const QuoteCard = ({
       ref={ref}
       className={
         colorScheme === "red"
-          ? "bg-black color-scheme-red"
-          : "bg-black color-scheme-green"
+          ? "color-scheme-red sticky top-0 h-fit"
+          : "color-scheme-green sticky top-0 h-fit"
       }
     >
       <motion.div
