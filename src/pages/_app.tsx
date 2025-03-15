@@ -1,4 +1,4 @@
-import Navigation from "@/components/Navigation";
+import Navigation from "@/components/TopHeader";
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import { ReactLenis } from "lenis/react";

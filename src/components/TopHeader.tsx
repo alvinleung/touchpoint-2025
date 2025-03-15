@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 
-const Navigation = () => {
+const TopHeader = () => {
   return (
     <motion.nav
       initial={{ y: -100 }}
@@ -31,4 +31,4 @@ const Navigation = () => {
   );
 };
 
-export default Navigation;
+export default TopHeader;
