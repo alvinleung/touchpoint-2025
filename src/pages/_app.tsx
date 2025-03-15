@@ -9,7 +9,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <div
       id="main-div"
-      className={`${nimbusFont.className} ${scheme} bg-main text-inverted flex flex-col w-full`}
+      className={`${nimbusFont.className} ${scheme} max-w-full overflow-x-hidden bg-main text-inverted flex flex-col w-full`}
     >
       {/* <ReactLenis root> */}
       <Navigation />

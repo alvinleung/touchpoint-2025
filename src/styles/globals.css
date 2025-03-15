@@ -34,6 +34,12 @@ body {
   --color-nav: var(--black);
   --color-inverted: var(--wallet-green);
 }
+
+.color-scheme-real-blue {
+  --color-main: var(--bianchi-blue);
+  --color-nav: var(--black);
+  --color-inverted: var(--wallet-green);
+}
 /* margin */
 :root {
   --body-padding: 16px;
@@ -62,11 +68,11 @@ body {
   @apply font-serif tracking-[-0.04em] leading-[.98em] text-2xl md:text-[3vw];
 }
 .text-big-serif {
-  @apply font-serif tracking-[-0.04em] leading-[.98em] text-2xl md:text-[4vw];
+  @apply font-serif tracking-[-0.04em] leading-[.98em] text-3xl md:text-[4vw];
 }
 
 .text-big-sans {
-  @apply font-sans tracking-[-0.04em] leading-[.98em] text-xl md:text-[4vw];
+  @apply font-sans tracking-[-0.04em] leading-[.98em] text-3xl md:text-[4vw];
 }
 
 .text-more-big-sans {
