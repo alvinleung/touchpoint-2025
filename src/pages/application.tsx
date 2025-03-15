@@ -7,7 +7,7 @@ export const getServerSideProps = getPageColorSchemeProps("red");
 const Application = () => {
   useDocumentTitle("Touchpoint 2025");
   return (
-    <div className="px-body mt-nav-height pt-nav-height">
+    <div className="px-body mt-nav-height pt-nav-height mb-24">
       <div className="flex flex-col gap-[1em] text-more-big-sans text-justify mb-24">
         <p>
           This year we have industry mentors providing feedback and insights in
