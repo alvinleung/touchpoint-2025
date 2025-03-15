@@ -11,18 +11,26 @@
 
   --color-main: var(--wallet-green);
   --color-inverted: var(--black);
+  --color-nav: var(--black);
 }
 
 .color-scheme-green {
   --color-main: var(--wallet-green);
+  --color-nav: var(--black);
   --color-inverted: var(--black);
 }
 
 .color-scheme-red {
   --color-main: var(--good-red);
   --color-inverted: var(--wallet-green);
+  --color-nav: var(--wallet-green);
 }
 
+.color-scheme-weirld-blend-blue {
+  --color-main: var(--wallet-green);
+  --color-nav: var(--black);
+  --color-inverted: var(--wallet-green);
+}
 /* margin */
 :root {
   --body-padding: 16px;
