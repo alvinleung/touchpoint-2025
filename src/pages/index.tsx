@@ -32,12 +32,12 @@ export default function Home() {
   const blurAmount = useTransform(
     scrollY,
     [blurEnterBegin, blurEnterEnd, blurExitBegin, blurExitEnd],
-    [0, 11, 11, 0],
+    [0, 11, 11, 0]
   );
   const scale = useTransform(
     scrollY,
     [blurEnterBegin, blurEnterEnd, blurExitBegin, blurExitEnd],
-    [1, 0.9, 0.9, 1],
+    [1, 0.9, 0.9, 1]
   );
   const blur = useTransform(blurAmount, (amount) => `blur(${amount}px)`);
 
@@ -66,13 +66,13 @@ export default function Home() {
 
   const fullScreenStyle = "min-h-screen flex items-center justify-center";
   const blueSectionStyle = "mix-blend-difference bg-white text-black";
-  const greenSectionStyle = "mix-blend-exclusion text-wallet-green";
+  // const greenSectionStyle = "mix-blend-exclusion text-wallet-green";
 
-  const responsiveMarginStyle = "px-body my-body md:px-[10vw] md:py-[10vw]";
-  const bodyMarginStyle = "px-body my-body";
+  const responsiveMarginStyle = "px-body py-body md:px-[10vw] md:py-[10vw]";
+  const bodyMarginStyle = "px-body py-body";
 
   return (
-    <div className="">
+    <div>
       <PillNav isVisible={shouldShowPillNav}>
         <PillNavItem>Get Tickets</PillNavItem>
         <PillNavItem outline>2025.03.22</PillNavItem>
@@ -107,7 +107,7 @@ export default function Home() {
           `text-huge-sans font-bold text-justify`,
           bodyMarginStyle,
           "py-body md:py-[1em]",
-          blueSectionStyle,
+          blueSectionStyle
         )}
       >
         <div>
@@ -119,27 +119,33 @@ export default function Home() {
         </div>
       </div>
       <div
-        className={cn("text-mid-serif ", fullScreenStyle, greenSectionStyle)}
-      >
-        <div className="max-w-[28ch] text-justify">
-          It is the care and responsibility to continue to thrive and support
-          others as in the past. It is a chance to reflect on the legacy we are
-          creating as designers — what kind of designers we want to be and to be
-          known for. What can we offer to others in how we practice design?
-        </div>
-      </div>
-      <div
         className={cn(
-          "text-big-serif text-justify",
-          responsiveMarginStyle,
-          blueSectionStyle,
+          "text-mid-serif ",
           fullScreenStyle,
+          blueSectionStyle,
+          responsiveMarginStyle
         )}
       >
-        It is a chance to reflect on where design is going. Design’s ongoing and
-        continuing legacy has brought wonder and also harm. The conference is an
-        opportunity to celebrate and to reflect on the long-lasting impact of
-        those at Touchpoint, new to Touchpoint, and design at large.
+        <div className="max-w-[28ch] flex flex-col gap-[2em] text-justify">
+          <p>
+            It is the care and responsibility to continue to thrive and support
+            others as in the past.
+          </p>
+          <p>
+            It is a chance to reflect on the legacy we are creating as designers
+            — what kind of designers we want to be and to be known for. What can
+            we offer to others in how we practice design?
+          </p>
+          <p>
+            It is a chance to reflect on where design is going. Design&apos;s
+            ongoing and continuing legacy has brought wonder and also harm.
+          </p>
+          <p>
+            The conference is an opportunity to celebrate and to reflect on the
+            long-lasting impact of those at Touchpoint, new to Touchpoint, and
+            design at large.
+          </p>
+        </div>
       </div>
       <footer className="min-h-screen"></footer>
     </div>

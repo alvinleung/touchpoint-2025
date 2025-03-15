@@ -1,3 +1,4 @@
+import { nimbusFont } from "@/utils/fonts";
 import { Html, Head, Main, NextScript, DocumentProps } from "next/document";
 
 export default function Document(props: DocumentProps) {
@@ -7,7 +8,7 @@ export default function Document(props: DocumentProps) {
   return (
     <Html lang="en">
       <Head />
-      <body className={`antialiased ${bodyClass}`}>
+      <body className={`antialiased ${bodyClass} ${nimbusFont.variable}`}>
         <Main />
         <NextScript />
       </body>

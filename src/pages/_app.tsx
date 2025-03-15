@@ -8,7 +8,9 @@ export default function App({ Component, pageProps }: AppProps) {
     <ReactLenis root>
       <Navigation />
       <Component {...pageProps} />
-      <div className=" bg-inverted text-main w-full text-center uppercase tracking-wide">Give a shit.</div>
+      <div className=" bg-inverted text-main w-full text-center uppercase tracking-wide">
+        Give a shit.
+      </div>
     </ReactLenis>
   );
 }

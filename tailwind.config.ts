@@ -11,6 +11,7 @@ export default {
       fontFamily: {
         serif: "Times New Roman",
         // sans: "Helvetica",
+        sans: ["var(--font-nimbus)"],
       },
       padding: {
         body: "var(--body-padding)",
