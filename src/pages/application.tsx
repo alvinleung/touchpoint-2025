@@ -22,7 +22,7 @@ const Application = () => {
         <p>Applications close end of day, Wednesday, March 19 2025.</p>
       </div>
       <a
-        href="https://example.com/apply"
+        href="https://docs.google.com/forms/d/e/1FAIpQLSfx4DzZFHuhMMJiyitBhUDEWk5pmNwqQ-ggeZ1nsJKOKgqFHw/viewform"
         target="_blank"
         className="bg-inverted text-main px-8 py-4 rounded-full uppercase tracking-[.21em] text-sm font-bold"
       >
