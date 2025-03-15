@@ -22,7 +22,7 @@ const Legacy = () => {
         </p>
       </div>
       {/* Legacy grid */}
-      <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6 mt-[14vh]">
+      <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6 mt-[8vh] mb-12">
         {LEGACY_SPEAKERS.map((event) => (
           <LegacyGridItem key={event.year} year={event.year}>
             {event.talks.map((talk, index) => (
