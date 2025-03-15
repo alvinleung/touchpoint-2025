@@ -14,6 +14,7 @@ import useDocumentHeight from "@/hooks/useDocumentHeight";
 import { useDocumentTitle, useWindowSize } from "usehooks-ts";
 import { PillNav, PillNavItem } from "@/components/PillNav";
 import { useEffect, useState } from "react";
+import { setColorScheme } from "@/utils/theme";
 
 export const getServerSideProps = getPageColorSchemeProps("green");
 
@@ -64,6 +65,26 @@ export default function Home() {
     }
   });
 
+  useMotionValueEvent(scrollY, "change", () => {
+    if (
+      scrollY.get() > window.innerHeight - 24 &&
+      scrollY.get() < blurExitEnd - window.innerHeight * 0.1
+    ) {
+      setShouldBeBlue(true);
+    } else {
+      setShouldBeBlue(false);
+    }
+  });
+
+  const [shouldBeBlue, setShouldBeBlue] = useState(false);
+  useEffect(() => {
+    if (shouldBeBlue) {
+      setColorScheme("blue");
+      return;
+    }
+    setColorScheme("green");
+  }, [shouldBeBlue]);
+
   const fullScreenStyle = "min-h-screen flex items-center justify-center";
   const blueSectionStyle = "mix-blend-difference bg-white text-black";
   // const greenSectionStyle = "mix-blend-exclusion text-wallet-green";
@@ -83,7 +104,12 @@ export default function Home() {
         <PillNavItem outline>2025.03.22</PillNavItem>
         <PillNavItem outline>SFU Surrey Engineering Building</PillNavItem>
         <PillNavItem href="/schedule">See Schedule</PillNavItem>
-        <PillNavItem>Submit Questions</PillNavItem>
+        <PillNavItem
+          href="https://docs.google.com/forms/d/e/1FAIpQLSdTwDuUNP16lE4iVlNWZiu7wfgxKVtXb29vQWB0t5jMk6Ylug/viewform"
+          target="blank"
+        >
+          Submit Questions
+        </PillNavItem>
         <PillNavItem href="/application">Mock Interviews</PillNavItem>
       </PillNav>
       <div className="sticky inset-0 flex justify-center items-center w-full h-screen">
