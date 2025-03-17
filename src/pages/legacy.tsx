@@ -2,6 +2,7 @@ import React from "react";
 import LEGACY_SPEAKERS from "@/data/legacySpeakers";
 import { getPageColorSchemeProps } from "@/utils/getPageColorSchemeProps";
 import { useDocumentTitle } from "usehooks-ts";
+import Link from "next/link";
 
 export const getServerSideProps = getPageColorSchemeProps("green");
 
@@ -43,12 +44,29 @@ const LegacyGridItem = ({
   children: React.ReactNode;
 }) => {
   return (
-    <div className="flex flex-col gap-0">
-      <div className="font-sans tracking-[-0.08em] leading-none text-[40vw] md:text-[18vw] xl:text-[13vw] font-light -ml-[.05em]">
-        {year}
+    <Link
+      href={`https://www.sfu.ca/idc/${year}`}
+      className="flex flex-col gap-0 hover:text-good-red"
+      target="_blank"
+    >
+      <div className="font-sans tracking-[-0.12em] leading-none -mb-[.2em] mt-8 text-[40vw] md:text-[18vw] xl:text-[13vw] font-light -ml-[.05em]">
+        <KernThatShit
+          str={`${year}`}
+          kernTable={[
+            { pair: "12", value: -0.09 },
+            { pair: "01", value: -0.07 },
+            { pair: "13", value: -0.1 },
+            { pair: "15", value: -0.11 },
+            { pair: "14", value: -0.12 },
+            { pair: "16", value: -0.1 },
+            { pair: "18", value: -0.09 },
+            { pair: "17", value: -0.13 },
+            { pair: "19", value: -0.09 },
+          ]}
+        />
       </div>
       <div className="text-smol-serif grid grid-cols-2 gap-x-6">{children}</div>
-    </div>
+    </Link>
   );
 };
 
@@ -59,6 +77,33 @@ const Talk = ({ name, company }: { name: string; company: string }) => {
       <span>{company}</span>
     </>
   );
+};
+
+const KernThatShit = ({
+  str,
+  kernTable,
+}: {
+  str: string;
+  kernTable: {
+    pair: string;
+    value: number;
+  }[];
+}) => {
+  const applyKerning = React.useMemo(() => {
+    const kernedText = str.split("").map((char, index, array) => {
+      if (index === array.length - 1) return char;
+      const pair = char + array[index + 1];
+      const kernValue = kernTable.find((k) => k.pair === pair)?.value || 0;
+      return (
+        <span key={index} style={{ marginRight: `${kernValue}em` }}>
+          {char}
+        </span>
+      );
+    });
+    return kernedText;
+  }, [str, kernTable]);
+
+  return <>{applyKerning}</>;
 };
 
 export default Legacy;

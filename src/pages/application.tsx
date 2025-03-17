@@ -1,4 +1,5 @@
 import { getPageColorSchemeProps } from "@/utils/getPageColorSchemeProps";
+import Link from "next/link";
 import React from "react";
 import { useDocumentTitle } from "usehooks-ts";
 
@@ -21,13 +22,13 @@ const Application = () => {
 
         <p>Applications close end of day, Wednesday, March 19 2025.</p>
       </div>
-      <a
+      <Link
         href="https://docs.google.com/forms/d/e/1FAIpQLSfx4DzZFHuhMMJiyitBhUDEWk5pmNwqQ-ggeZ1nsJKOKgqFHw/viewform"
-        target="_blankschedule"
-        className="bg-inverted text-main px-8 py-4 rounded-full uppercase tracking-[.21em] text-sm font-bold"
+        target="_blank"
+        className="bg-inverted text-main hover:bg-bianchi-blue hover:text-wallet-green text-smol-sans inline-flex items-center justify-center px-4 pt-2 pb-1 rounded-full w-fit "
       >
         Apply for Mock Interview
-      </a>
+      </Link>
     </div>
   );
 };

@@ -12,6 +12,11 @@ export const nimbusFont = localFont({
       weight: "700",
       style: "normal",
     },
+    {
+      path: "../../public/nimbus-sans/nimbus-sans-light.otf",
+      weight: "300",
+      style: "normal",
+    },
   ],
   variable: "--font-nimbus",
 });
