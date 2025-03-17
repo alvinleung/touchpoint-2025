@@ -67,7 +67,7 @@ const SCHEDULE = [
     time: "14:30",
     type: "talk",
     event: "Connor Lowe",
-    role: "Product Designer",
+    affiliation: "Invisible Dynamics",
     format: "Live",
   },
   {
@@ -77,8 +77,8 @@ const SCHEDULE = [
   },
   {
     type: "event",
-    time: "14:45",
-    event: "Q&A",
+    time: "16:00",
+    event: "End",
   },
 ];
 
