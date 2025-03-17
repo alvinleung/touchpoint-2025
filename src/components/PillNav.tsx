@@ -83,7 +83,7 @@ export const PillNavItem = ({
         },
       }}
       className={cn(
-        `text-smol-sans inline-flex items-center justify-center px-4 pt-1 py-0.5 rounded-full w-fit `,
+        `text-smol-sans inline-flex items-center justify-center px-4 pt-1.5 pb-0.5 rounded-full w-fit `,
         outline ? outlineStyle : redStyle,
         href === "/" ? "cursor-default" : "cursor-pointer"
       )}

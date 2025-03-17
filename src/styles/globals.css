@@ -85,7 +85,7 @@ body {
 }
 
 .text-more-big-sans {
-  @apply font-sans tracking-[-0.04em] leading-[.98em] text-[5vw];
+  @apply font-sans tracking-[-0.04em] leading-[.98em] text-3xl md:text-[5vw];
 }
 .text-huge-sans {
   @apply font-sans tracking-[-0.08em] leading-none text-[9vw];
