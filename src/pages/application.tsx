@@ -10,7 +10,7 @@ const Application = () => {
   useDocumentTitle("Touchpoint 2025");
   return (
     <div className="mt-nav-height pt-nav-height min-h-screen flex flex-col  justify-between">
-      <div className="px-body flex flex-col gap-[1em] text-more-big-sans text-justify mb-16">
+      <div className="px-body flex flex-col gap-[1em] text-more-big-sans text-justify mb-12">
         <p>
           This year, industry mentors — from All Purpose, Aritzia, Artefact,
           Contrary, Critical Mass, Figma, Google, Instagram, Instrument, Meta,
@@ -20,7 +20,7 @@ const Application = () => {
 
         <p>Applications close Monday, March 17, 2025 at 17.00.</p>
       </div>
-      <div className="flex justify-center">
+      <div className="flex justify-center mb-16">
         <Link
           href="https://docs.google.com/forms/d/e/1FAIpQLSfx4DzZFHuhMMJiyitBhUDEWk5pmNwqQ-ggeZ1nsJKOKgqFHw/viewform"
           target="_blank"
