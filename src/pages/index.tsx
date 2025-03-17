@@ -15,6 +15,7 @@ import { useDocumentTitle, useWindowSize } from "usehooks-ts";
 import { PillNav, PillNavItem } from "@/components/PillNav";
 import { useEffect, useState } from "react";
 import { setColorScheme } from "@/utils/theme";
+import Footer from "@/components/Footer";
 
 export const getServerSideProps = getPageColorSchemeProps("green");
 
@@ -93,93 +94,96 @@ export default function Home() {
   const bodyMarginStyle = "px-body py-[10vh]";
 
   return (
-    <div>
-      <PillNav isVisible={shouldShowPillNav}>
-        <PillNavItem
-          target="blank"
-          href="https://www.eventbrite.ca/e/touchpoint-design-conference-tickets-1235853032689?aff=oddtdtcreator"
-        >
-          Get Tickets
-        </PillNavItem>
-        <PillNavItem outline>2025.03.22</PillNavItem>
-        <PillNavItem outline>SFU Surrey Engineering Building</PillNavItem>
-        <PillNavItem href="/schedule">See Schedule</PillNavItem>
-        <PillNavItem
-          href="https://docs.google.com/forms/d/e/1FAIpQLSdTwDuUNP16lE4iVlNWZiu7wfgxKVtXb29vQWB0t5jMk6Ylug/viewform"
-          target="blank"
-        >
-          Submit Questions
-        </PillNavItem>
-        <PillNavItem href="/application">Mock Interviews</PillNavItem>
-      </PillNav>
-      <div className="fixed inset-0 flex justify-center items-center w-full h-screen">
-        <motion.div
-          initial={{ scale: 1.2, filter: "blur(50px)", opacity: 0 }}
-          animate={{
-            scale: 1,
-            filter: "blur(0px)",
-            opacity: 1,
-            transition: {
-              duration: 2,
+    <>
+      <div>
+        <PillNav isVisible={shouldShowPillNav}>
+          <PillNavItem
+            target="blank"
+            href="https://www.eventbrite.ca/e/touchpoint-design-conference-tickets-1235853032689?aff=oddtdtcreator"
+          >
+            Get Tickets
+          </PillNavItem>
+          <PillNavItem outline>2025.03.22</PillNavItem>
+          <PillNavItem outline>SFU Surrey Engineering Building</PillNavItem>
+          <PillNavItem href="/schedule">See Schedule</PillNavItem>
+          <PillNavItem
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdTwDuUNP16lE4iVlNWZiu7wfgxKVtXb29vQWB0t5jMk6Ylug/viewform"
+            target="blank"
+          >
+            Submit Questions
+          </PillNavItem>
+          <PillNavItem href="/application">Mock Interviews</PillNavItem>
+        </PillNav>
+        <div className="fixed inset-0 flex justify-center items-center w-full h-screen">
+          <motion.div
+            initial={{ scale: 1.2, filter: "blur(50px)", opacity: 0 }}
+            animate={{
+              scale: 1,
+              filter: "blur(0px)",
+              opacity: 1,
               transition: {
-                duration: 0.5,
-                ease: [0.22, 1, 0.36, 1],
+                duration: 2,
+                transition: {
+                  duration: 0.5,
+                  ease: [0.22, 1, 0.36, 1],
+                },
               },
-            },
-          }}
-        >
-          <motion.div style={{ filter: blur, scale }} className="px-body">
-            <Logo className="max-w-full" viewBox="0 0 680 270" />
+            }}
+          >
+            <motion.div style={{ filter: blur, scale }} className="px-body">
+              <Logo className="max-w-full" viewBox="0 0 680 270" />
+            </motion.div>
           </motion.div>
-        </motion.div>
-      </div>
-      <div className="h-screen" />
-      <div
-        className={cn(
-          `text-huge-sans font-bold text-justify`,
-          bodyMarginStyle,
-          "py-body md:py-[1em]",
-          blueSectionStyle
-        )}
-      >
-        <div>
-          Legacy speaks to the long-lasting impact of an individual as well as
-          the many. It is to celebrate and honour by taking the responsibility
-          to carry forward what many have given us. This is a celebration and
-          honouring of the memory of Russell Taylor, founder of Touchpoint, and
-          much more
         </div>
-      </div>
-      <div
-        className={cn(
-          "text-mid-serif ",
-          fullScreenStyle,
-          blueSectionStyle,
-          responsiveMarginStyle
-        )}
-      >
-        <div className="max-w-[28ch] flex flex-col gap-[2em] text-justify">
-          <p>
-            It is the care and responsibility to continue to thrive and support
-            others as in the past.
-          </p>
-          <p>
-            It is a chance to reflect on the legacy we are creating as designers
-            — what kind of designers we want to be and to be known for. What can
-            we offer to others in how we practice design?
-          </p>
-          <p>
-            It is a chance to reflect on where design is going. Design&apos;s
-            ongoing and continuing legacy has brought wonder and also harm.
-          </p>
-          <p>
-            The conference is an opportunity to celebrate and to reflect on the
-            long-lasting impact of those at Touchpoint, new to Touchpoint, and
-            design at large.
-          </p>
+        <div className="h-screen" />
+        <div
+          className={cn(
+            `text-huge-sans font-bold text-justify`,
+            bodyMarginStyle,
+            "py-body md:py-[1em]",
+            blueSectionStyle
+          )}
+        >
+          <div>
+            Legacy speaks to the long-lasting impact of an individual as well as
+            the many. It is to celebrate and honour by taking the responsibility
+            to carry forward what many have given us. This is a celebration and
+            honouring of the memory of Russell Taylor, founder of Touchpoint,
+            and much more
+          </div>
         </div>
+        <div
+          className={cn(
+            "text-mid-serif ",
+            fullScreenStyle,
+            blueSectionStyle,
+            responsiveMarginStyle
+          )}
+        >
+          <div className="max-w-[28ch] flex flex-col gap-[2em] text-justify">
+            <p>
+              It is the care and responsibility to continue to thrive and
+              support others as in the past.
+            </p>
+            <p>
+              It is a chance to reflect on the legacy we are creating as
+              designers — what kind of designers we want to be and to be known
+              for. What can we offer to others in how we practice design?
+            </p>
+            <p>
+              It is a chance to reflect on where design is going. Design&apos;s
+              ongoing and continuing legacy has brought wonder and also harm.
+            </p>
+            <p>
+              The conference is an opportunity to celebrate and to reflect on
+              the long-lasting impact of those at Touchpoint, new to Touchpoint,
+              and design at large.
+            </p>
+          </div>
+        </div>
+        <footer className="min-h-screen"></footer>
       </div>
-      <footer className="min-h-screen"></footer>
-    </div>
+      <Footer quote={"Give a shit."} />
+    </>
   );
 }

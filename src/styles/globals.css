@@ -30,8 +30,8 @@ body {
   --color-main: var(--good-red);
   --color-inverted: var(--wallet-green);
   --color-nav: var(--wallet-green);
-  --color-footer-bg: var(--black);
-  --color-footer-text: var(--wallet-green);
+  --color-footer-bg: var(--wallet-green);
+  --color-footer-text: var(--good-red);
 }
 
 .color-scheme-blue {
@@ -46,8 +46,8 @@ body {
   --color-main: var(--bianchi-blue);
   --color-nav: var(--black);
   --color-inverted: var(--wallet-green);
-  --color-footer-bg: var(--black);
-  --color-footer-text: var(--wallet-green);
+  --color-footer-bg: var(--wallet-green);
+  --color-footer-text: var(--bianchi-blue);
 }
 /* margin */
 :root {

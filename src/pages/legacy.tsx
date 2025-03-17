@@ -3,36 +3,40 @@ import LEGACY_SPEAKERS from "@/data/legacySpeakers";
 import { getPageColorSchemeProps } from "@/utils/getPageColorSchemeProps";
 import { useDocumentTitle } from "usehooks-ts";
 import Link from "next/link";
+import Footer from "@/components/Footer";
 
 export const getServerSideProps = getPageColorSchemeProps("green");
 
 const Legacy = () => {
   useDocumentTitle("Touchpoint 2025");
   return (
-    <div className="px-body pt-nav-height min-h-screen">
-      <div className="text-big-serif text-justify flex flex-col gap-[1em] mt-nav-height">
-        <p>
-          Touchpoint is an annual design conference for the creative community,
-          that serves as a space for design practitioners, students, and
-          like-minded individuals, where bright ideas form the most inspired
-          minds.
-        </p>
-        <p>
-          Designed to spark dialogue and collaboration, it offers a platform to
-          discuss opportunities, confront challenges, and form connections.
-        </p>
+    <>
+      <div className="px-body pt-nav-height min-h-screen">
+        <div className="text-big-serif text-justify flex flex-col gap-[1em] mt-nav-height">
+          <p>
+            Touchpoint is an annual design conference for the creative
+            community, that serves as a space for design practitioners,
+            students, and like-minded individuals, where bright ideas form the
+            most inspired minds.
+          </p>
+          <p>
+            Designed to spark dialogue and collaboration, it offers a platform
+            to discuss opportunities, confront challenges, and form connections.
+          </p>
+        </div>
+        {/* Legacy grid */}
+        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6 mt-[8vh] mb-12">
+          {LEGACY_SPEAKERS.map((event) => (
+            <LegacyGridItem key={event.year} year={event.year}>
+              {event.talks.map((talk, index) => (
+                <Talk key={index} name={talk.speakers} company={talk.company} />
+              ))}
+            </LegacyGridItem>
+          ))}
+        </div>
       </div>
-      {/* Legacy grid */}
-      <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6 mt-[8vh] mb-12">
-        {LEGACY_SPEAKERS.map((event) => (
-          <LegacyGridItem key={event.year} year={event.year}>
-            {event.talks.map((talk, index) => (
-              <Talk key={index} name={talk.speakers} company={talk.company} />
-            ))}
-          </LegacyGridItem>
-        ))}
-      </div>
-    </div>
+      <Footer quote={"Give a shit."} />
+    </>
   );
 };
 
