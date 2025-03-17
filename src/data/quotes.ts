@@ -38,10 +38,6 @@ const QUOTES = [
     author: "Albert Einstein",
   },
   {
-    quote: "We don’t have time to get all emotional about our failures, all we see is the challenge before us to get it right, and not make that mistake again. And eventually, if you do that enough: it WILL start to become easy, or easier.",
-    author: "Russell Taylor",
-  },
-  {
     quote: "The quality of your process, will determine the quality of your results.",
     author: "Clement Mok",
   },
