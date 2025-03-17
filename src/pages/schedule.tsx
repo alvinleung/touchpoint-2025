@@ -34,6 +34,7 @@ const Schedule = () => {
           </Fragment>
         ))}
       </div>
+
       <div className="fixed bottom-8 left-0 right-0 flex justify-center">
         <PrimaryCTA />
       </div>

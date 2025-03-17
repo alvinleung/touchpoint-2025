@@ -90,7 +90,7 @@ export default function Home() {
   // const greenSectionStyle = "mix-blend-exclusion text-wallet-green";
 
   const responsiveMarginStyle = "px-body py-body md:px-[10vw] md:py-[10vw]";
-  const bodyMarginStyle = "px-body py-body";
+  const bodyMarginStyle = "px-body py-[10vh]";
 
   return (
     <div>
