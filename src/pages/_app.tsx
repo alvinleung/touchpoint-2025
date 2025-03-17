@@ -3,9 +3,11 @@ import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 // import { ReactLenis } from "lenis/react";
 import { nimbusFont } from "@/utils/fonts";
+import RandomFooter from "@/components/RandomFooter";
 
 export default function App({ Component, pageProps }: AppProps) {
   const scheme = pageProps?.scheme || ""; // Get the class from page props
+
   return (
     <div
       id="main-div"
@@ -14,9 +16,7 @@ export default function App({ Component, pageProps }: AppProps) {
       {/* <ReactLenis root> */}
       <Navigation />
       <Component {...pageProps} />
-      <footer className="bg-good-red text-wallet-green w-full text-center uppercase tracking-wide">
-        Give a shit.
-      </footer>
+      <RandomFooter />
       {/* </ReactLenis> */}
     </div>
   );

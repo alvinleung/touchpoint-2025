@@ -24,7 +24,7 @@ const TopHeader = () => {
       >
         <Link
           href="/legacy"
-          className="uppercase tracking-widest text-xs md:w-60"
+          className="uppercase tracking-widest text-[.65rem] md:w-60"
         >
           Since 2012
         </Link>
@@ -33,7 +33,7 @@ const TopHeader = () => {
         </Link>
         <Link
           href="/anthology"
-          className="uppercase tracking-widest text-xs md:w-60 text-right"
+          className="uppercase tracking-widest text-[.65rem] md:w-60 text-right"
         >
           <span className="max-md:hidden">An anthology of</span> quotations
         </Link>

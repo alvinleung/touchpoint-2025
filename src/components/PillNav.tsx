@@ -11,7 +11,7 @@ export const PillNav = ({
   isVisible: boolean;
 }) => {
   return (
-    <div className="fixed bottom-0 left-0 right-0 mx-auto mb-10 z-20 flex justify-center flex-wrap max-w-[540px]">
+    <div className="fixed bottom-0 left-0 right-0 px-body mx-auto mb-10 z-20 flex justify-center flex-wrap max-w-[600px]">
       <AnimatePresence>{isVisible && <>{children}</>}</AnimatePresence>
     </div>
   );
@@ -69,7 +69,6 @@ export const PillNavItem = ({
         },
       }}
       whileHover={{
-        scale: 1.1,
         transition: {
           type: "spring",
           stiffness: 1200,
@@ -77,7 +76,6 @@ export const PillNavItem = ({
         },
       }}
       whileTap={{
-        scale: 0.97,
         transition: {
           type: "spring",
           stiffness: 400,
@@ -85,8 +83,9 @@ export const PillNavItem = ({
         },
       }}
       className={cn(
-        `cursor-pointer text-smol-sans inline-block px-4 py-1 rounded-full w-fit`,
+        `text-smol-sans inline-flex items-center justify-center px-4 pt-1 py-0.5 rounded-full w-fit `,
         outline ? outlineStyle : redStyle,
+        href === "/" ? "cursor-default" : "cursor-pointer"
       )}
     >
       {children}

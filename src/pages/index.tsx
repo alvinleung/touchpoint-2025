@@ -112,7 +112,7 @@ export default function Home() {
         </PillNavItem>
         <PillNavItem href="/application">Mock Interviews</PillNavItem>
       </PillNav>
-      <div className="sticky inset-0 flex justify-center items-center w-full h-screen">
+      <div className="fixed inset-0 flex justify-center items-center w-full h-screen">
         <motion.div
           initial={{ scale: 1.2, filter: "blur(50px)", opacity: 0 }}
           animate={{
@@ -128,11 +128,12 @@ export default function Home() {
             },
           }}
         >
-          <motion.div style={{ filter: blur, scale }}>
-            <Logo className="max-w-full" width="100%" viewBox="0 0 680 270" />
+          <motion.div style={{ filter: blur, scale }} className="px-body">
+            <Logo className="max-w-full" viewBox="0 0 680 270" />
           </motion.div>
         </motion.div>
       </div>
+      <div className="h-screen" />
       <div
         className={cn(
           `text-huge-sans font-bold text-justify`,
