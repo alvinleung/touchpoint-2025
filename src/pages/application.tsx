@@ -22,13 +22,15 @@ const Application = () => {
 
         <p>Applications close end of day, Wednesday, March 19 2025.</p>
       </div>
-      <Link
-        href="https://docs.google.com/forms/d/e/1FAIpQLSfx4DzZFHuhMMJiyitBhUDEWk5pmNwqQ-ggeZ1nsJKOKgqFHw/viewform"
-        target="_blank"
-        className="bg-inverted text-main hover:bg-bianchi-blue hover:text-wallet-green text-smol-sans inline-flex items-center justify-center px-4 pt-2 pb-1 rounded-full w-fit "
-      >
-        Apply for Mock Interview
-      </Link>
+      <div className="flex justify-center">
+        <Link
+          href="https://docs.google.com/forms/d/e/1FAIpQLSfx4DzZFHuhMMJiyitBhUDEWk5pmNwqQ-ggeZ1nsJKOKgqFHw/viewform"
+          target="_blank"
+          className="bg-inverted text-main hover:bg-bianchi-blue hover:text-wallet-green text-2xl inline-flex items-center justify-center px-6 pt-2 pb-1  rounded-full w-fit "
+        >
+          Apply for Mock Interview
+        </Link>
+      </div>
     </div>
   );
 };
