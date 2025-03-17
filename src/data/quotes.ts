@@ -122,7 +122,7 @@ const QUOTES = [
     author: "T.S. Eliot",
   },
   {
-    quote: "Étonnez moi.",
+    quote: "Étonnez-moi.",
     author: "Alexey Brodovitch",
   },
   {
