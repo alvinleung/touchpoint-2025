@@ -60,7 +60,7 @@ const SCHEDULE = [
     time: "14:00",
     type: "talk",
     event: "Christine Poh",
-    affiliation: "Invoke Co.",
+    affiliation: "Invoke",
     format: "Live",
   },
   {
