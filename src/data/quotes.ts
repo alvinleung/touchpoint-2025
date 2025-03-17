@@ -90,7 +90,7 @@ const QUOTES = [
     author: "Russell Taylor",
   },
   {
-    quote: "You probably have heard the saying, 'it's important to care, but be careful of caring too much'.  When we over-invest, our egos can get in the way. and, as our work is so collective, we simply cannot let things go there.",
+    quote: "You probably have heard the saying, 'it's important to care, but be careful of caring too much'.  When we over-invest, our egos can get in the way, and, as our work is so collective, we simply cannot let things go there.",
     author: "Russell Taylor",
   },
   {
