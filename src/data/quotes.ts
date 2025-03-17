@@ -54,7 +54,7 @@ const QUOTES = [
     author: "Russell Taylor",
   },
   {
-    quote: "As you design: remember this bigger picture. And you continue as a designer, be in the practice of continuing to ask: what is design? What is good design? And, why do we design? As well as the seemingly easier question of whom are we designing for. Because if we don’t, I fear that “design” as UX design, will lose its very soul.",
+    quote: "As you design: remember this bigger picture. And you continue as a designer, be in the practice of continuing to ask: what is design? What is good design? And, why do we design? As well as the seemingly easier question of whom are we designing for.",
     author: "Russell Taylor",
   }, 
   {
