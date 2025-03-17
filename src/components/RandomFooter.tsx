@@ -28,7 +28,7 @@ const RandomFooter = () => {
         backgroundColor: "var(--color-footer-bg)",
         color: "var(--color-footer-text)",
       }}
-      className=" w-full text-sm text-center uppercase tracking-wide"
+      className="pt-1 w-full text-xs text-center uppercase tracking-wide"
     >
       <div className="overflow-hidden whitespace-nowrap">
         <motion.div

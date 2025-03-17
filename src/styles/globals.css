@@ -4,6 +4,7 @@
 
 body {
   overscroll-behavior: none;
+  background-color: #000;
 }
 :root {
   --wallet-green: #c8ff00;

@@ -26,7 +26,7 @@ const Schedule = () => {
               )}
               {item.type === "talk" && (
                 <>
-                  <span className="font-bold">{item.event}</span>,
+                  <span className="font-bold">{item.event}</span>,{" "}
                   <span className="font-light">{item.affiliation}</span>
                 </>
               )}

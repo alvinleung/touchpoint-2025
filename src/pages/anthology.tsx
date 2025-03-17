@@ -12,7 +12,7 @@ const Application = () => {
   useDocumentTitle("Touchpoint 2025");
   return (
     <div className="relative">
-      <div className="px-body justify-center flex flex-col gap-[1em] h-screen text-more-big-sans text-justify">
+      <div className="px-body justify-center flex flex-col gap-[1em] h-screen text-big-serif text-justify">
         <p>
           A collection of words by Russell Taylor, and by those who inspired
           him, with which he used to inspire us.
