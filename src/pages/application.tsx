@@ -1,4 +1,5 @@
 import Footer from "@/components/Footer";
+import useHasExpired from "@/hooks/useHasExpired";
 import { getPageColorSchemeProps } from "@/utils/getPageColorSchemeProps";
 import Link from "next/link";
 import React from "react";
@@ -8,6 +9,7 @@ export const getServerSideProps = getPageColorSchemeProps("red");
 
 const Application = () => {
   useDocumentTitle("Touchpoint 2025");
+  const hasExpired = useHasExpired("2025-03-17");
   return (
     <div className="mt-nav-height pt-nav-height min-h-screen flex flex-col  justify-between">
       <div className="px-body flex flex-col gap-[1em] text-more-big-sans text-justify mb-12">
@@ -21,13 +23,15 @@ const Application = () => {
         <p>Applications close Monday, March 17, 2025 at 17.00.</p>
       </div>
       <div className="flex justify-center mb-16">
-        <Link
-          href="https://docs.google.com/forms/d/e/1FAIpQLSfx4DzZFHuhMMJiyitBhUDEWk5pmNwqQ-ggeZ1nsJKOKgqFHw/viewform"
-          target="_blank"
-          className="bg-inverted text-main hover:bg-bianchi-blue hover:text-wallet-green text-2xl inline-flex items-center justify-center px-6 pt-2 pb-1  rounded-full w-fit "
-        >
-          Apply for Mock Interview
-        </Link>
+        {!hasExpired && (
+          <Link
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfx4DzZFHuhMMJiyitBhUDEWk5pmNwqQ-ggeZ1nsJKOKgqFHw/viewform"
+            target="_blank"
+            className="bg-inverted text-main hover:bg-bianchi-blue hover:text-wallet-green text-2xl inline-flex items-center justify-center px-6 pt-2 pb-1  rounded-full w-fit "
+          >
+            Apply for Mock Interview
+          </Link>
+        )}
       </div>
       <Footer quote="as Alexey Brodovitch said, étonnez moi — Astonish me." />
     </div>

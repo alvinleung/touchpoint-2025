@@ -4,11 +4,13 @@ import { getPageColorSchemeProps } from "@/utils/getPageColorSchemeProps";
 import { useDocumentTitle } from "usehooks-ts";
 import Link from "next/link";
 import Footer from "@/components/Footer";
+import useHasExpired from "@/hooks/useHasExpired";
 
 export const getServerSideProps = getPageColorSchemeProps("real-blue");
 
 const Schedule = () => {
   useDocumentTitle("Touchpoint 2025");
+  const hasExpired = useHasExpired("2025-08-22");
 
   return (
     <>
@@ -38,7 +40,7 @@ const Schedule = () => {
         </div>
 
         <div className="fixed bottom-8 left-0 right-0 flex justify-center">
-          <PrimaryCTA />
+          {!hasExpired && <PrimaryCTA />}
         </div>
       </div>
       <Footer quote="This is, finally, a time to come together, and celebrate, as a community." />

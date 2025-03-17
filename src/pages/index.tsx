@@ -16,6 +16,7 @@ import { PillNav, PillNavItem } from "@/components/PillNav";
 import { useEffect, useState } from "react";
 import { setColorScheme } from "@/utils/theme";
 import Footer from "@/components/Footer";
+import useHasExpired from "@/hooks/useHasExpired";
 
 export const getServerSideProps = getPageColorSchemeProps("green");
 
@@ -93,25 +94,30 @@ export default function Home() {
   const responsiveMarginStyle = "px-body py-body md:px-[10vw] md:py-[10vw]";
   const bodyMarginStyle = "px-body py-[10vh]";
 
+  const hasExpired = useHasExpired("2025-08-22");
   return (
     <>
       <div>
         <PillNav isVisible={shouldShowPillNav}>
-          <PillNavItem
-            target="blank"
-            href="https://www.eventbrite.ca/e/touchpoint-design-conference-tickets-1235853032689?aff=oddtdtcreator"
-          >
-            Get Tickets
-          </PillNavItem>
+          {!hasExpired && (
+            <PillNavItem
+              target="blank"
+              href="https://www.eventbrite.ca/e/touchpoint-design-conference-tickets-1235853032689?aff=oddtdtcreator"
+            >
+              Get Tickets
+            </PillNavItem>
+          )}
           <PillNavItem outline>2025.03.22</PillNavItem>
           <PillNavItem outline>SFU Surrey Engineering Building</PillNavItem>
           <PillNavItem href="/schedule">See Schedule</PillNavItem>
-          <PillNavItem
-            href="https://docs.google.com/forms/d/e/1FAIpQLSdTwDuUNP16lE4iVlNWZiu7wfgxKVtXb29vQWB0t5jMk6Ylug/viewform"
-            target="blank"
-          >
-            Submit Questions
-          </PillNavItem>
+          {!hasExpired && (
+            <PillNavItem
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdTwDuUNP16lE4iVlNWZiu7wfgxKVtXb29vQWB0t5jMk6Ylug/viewform"
+              target="blank"
+            >
+              Submit Questions
+            </PillNavItem>
+          )}
           <PillNavItem href="/application">Mock Interviews</PillNavItem>
         </PillNav>
         <div className="fixed inset-0 flex justify-center items-center w-full h-screen">
