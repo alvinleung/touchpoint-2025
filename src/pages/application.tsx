@@ -15,7 +15,7 @@ const Application = () => {
       <div className="px-body flex flex-col gap-[1em] text-more-big-sans text-justify mb-12">
         <p>
           This year, industry mentors — from All Purpose, Aritzia, Artefact,
-          Contrary, Critical Mass, Figma, Google, Instagram, Instrument, Meta,
+          Contrary, Critical Mass, Electronic Arts, Figma, Google, Instagram, Instrument, Meta,
           Retro, SAP, SVSD, Takram, Workday, and Youtube — will be providing
           feedback in mock interviews held remotely on Sunday, March 23, 2025.
         </p>
