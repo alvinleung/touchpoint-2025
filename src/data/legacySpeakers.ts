@@ -157,7 +157,7 @@ const LEGACY_SPEAKERS = [
     talks: [
       { speakers: "Dan Nanasi", company: "Microsoft" },
       { speakers: "Maheen Sohail", company: "Meta" },
-      { speakers: "Connor Lowe", company: "Independent" },
+      { speakers: "Connor Lowe", company: "Invisible Dynamics" },
       { speakers: "Marta Bernstein", company: "Studio Matthews" },
       { speakers: "Mark Strathern", company: "Archivio Boggeri" },
       { speakers: "Christopher Elawa", company: "Meta" },
