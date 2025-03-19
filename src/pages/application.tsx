@@ -9,7 +9,7 @@ export const getServerSideProps = getPageColorSchemeProps("red");
 
 const Application = () => {
   useDocumentTitle("Touchpoint 2025");
-  const hasExpired = useHasExpired("2025-03-17");
+  // const hasExpired = useHasExpired("2025-03-17");
   return (
     <div className="mt-nav-height pt-nav-height min-h-screen flex flex-col  justify-between">
       <div className="px-body flex flex-col gap-[1em] text-more-big-sans text-justify mb-12">
