@@ -35,7 +35,7 @@ const Legacy = () => {
           ))}
         </div>
       </div>
-      <Footer quote={"Give a shit."} />
+      <Footer quote={"Give it all away."} />
     </>
   );
 };
