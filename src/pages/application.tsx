@@ -22,7 +22,7 @@ const Application = () => {
 
         <p>Applications close Monday, March 17, 2025 at 17.00.</p>
       </div>
-      <div className="flex justify-center mb-16">
+{/*       <div className="flex justify-center mb-16">
         {!hasExpired && (
           <Link
             href="https://docs.google.com/forms/d/e/1FAIpQLSfx4DzZFHuhMMJiyitBhUDEWk5pmNwqQ-ggeZ1nsJKOKgqFHw/viewform"
@@ -32,7 +32,7 @@ const Application = () => {
             Apply for Mock Interview
           </Link>
         )}
-      </div>
+      </div> */}
       <Footer quote="as Alexey Brodovitch said, étonnez moi — Astonish me." />
     </div>
   );
