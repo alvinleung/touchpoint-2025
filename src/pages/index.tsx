@@ -35,12 +35,12 @@ export default function Home() {
   const blurAmount = useTransform(
     scrollY,
     [blurEnterBegin, blurEnterEnd, blurExitBegin, blurExitEnd],
-    [0, 11, 11, 0],
+    [0, 11, 11, 0]
   );
   const scale = useTransform(
     scrollY,
     [blurEnterBegin, blurEnterEnd, blurExitBegin, blurExitEnd],
-    [1, 0.9, 0.9, 1],
+    [1, 0.9, 0.9, 1]
   );
   const blur = useTransform(blurAmount, (amount) => `blur(${amount}px)`);
 
@@ -90,6 +90,9 @@ export default function Home() {
   const fullScreenStyle = "min-h-screen flex items-center justify-center";
   const blueSectionStyle = "mix-blend-difference bg-white text-black";
   // const greenSectionStyle = "mix-blend-exclusion text-wallet-green";
+
+  const responsiveMarginStyle = "px-body py-body md:px-[10vw] md:py-[10vw]";
+  const bodyMarginStyle = "px-body py-[10vh]";
 
   const hasExpired = useHasExpired("2025-08-22");
   return (
@@ -142,8 +145,9 @@ export default function Home() {
         <div
           className={cn(
             `text-huge-sans font-bold text-justify`,
-            "px-body pt-[50vh]",
-            blueSectionStyle,
+            bodyMarginStyle,
+            "py-body md:py-[1em]",
+            blueSectionStyle
           )}
         >
           <div>
@@ -151,15 +155,15 @@ export default function Home() {
             the many. It is to celebrate and honour by taking the responsibility
             to carry forward what many have given us. This is a celebration and
             honouring of the memory of Russell Taylor, founder of Touchpoint,
-            and much more.
+            and much more
           </div>
         </div>
         <div
           className={cn(
             "text-mid-serif ",
-            "pt-[20vh] pb-[40vh]",
             fullScreenStyle,
             blueSectionStyle,
+            responsiveMarginStyle
           )}
         >
           <div className="max-w-[28ch] flex flex-col gap-[2em] text-justify">
