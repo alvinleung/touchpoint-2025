@@ -19,7 +19,7 @@ const SCHEDULE = [
   {
     time: "10.30",
     type: "talk",
-    event: "Eva Dekkers",
+    event: "Eva Deckers",
     affiliation: "Catharina Hospital Eindhoven",
     format: "Remote",
   },
