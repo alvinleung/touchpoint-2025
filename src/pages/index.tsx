@@ -155,7 +155,7 @@ export default function Home() {
             the many. It is to celebrate and honour by taking the responsibility
             to carry forward what many have given us. This is a celebration and
             honouring of the memory of Russell Taylor, founder of Touchpoint,
-            and much more
+            and much more.
           </div>
         </div>
         <div
