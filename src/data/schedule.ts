@@ -30,13 +30,13 @@ const SCHEDULE = [
     affiliation: "Habanero",
     format: "Live",
   },
-  {
-    time: "11.30",
-    type: "talk",
-    event: "Andrew Nip",
-    affiliation: "Frog Design",
-    format: "Remote",
-  },
+  // {
+  //   time: "11.30",
+  //   type: "talk",
+  //   event: "Andrew Nip",
+  //   affiliation: "Frog Design",
+  //   format: "Remote",
+  // },
   {
     time: "12.00",
     type: "event",
@@ -45,8 +45,8 @@ const SCHEDULE = [
   {
     time: "13.00",
     type: "talk",
-    event: "Naheel Jawaid",
-    affiliation: "Silicon Valley School of Design",
+    event: "Andrew Nip",
+    affiliation: "Frog Design",
     format: "Live",
   },
   {
