@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import SCHEDULE from "@/data/schedule";
 import { getPageColorSchemeProps } from "@/utils/getPageColorSchemeProps";
 import { useDocumentTitle } from "usehooks-ts";
-import Link from "next/link";
+/import Link from "next/link";
 import Footer from "@/components/Footer";
 import useHasExpired from "@/hooks/useHasExpired";
 
@@ -48,14 +48,6 @@ const Schedule = () => {
   );
 };
 
-const PrimaryCTA = () => (
-  <Link
-    href="https://docs.google.com/forms/d/e/1FAIpQLSdTwDuUNP16lE4iVlNWZiu7wfgxKVtXb29vQWB0t5jMk6Ylug/viewform"
-    target="_blank"
-    className="flex hover:bg-black hover:text-wallet-green px-6 pt-2 pb-1 bg-wallet-green text-bianchi-blue  rounded-full font-sans text-2xl font-normal leading-snug tracking-tight"
-  >
-    Submit Questions
-  </Link>
-);
+
 
 export default Schedule;
