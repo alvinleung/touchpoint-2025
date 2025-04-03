@@ -2,9 +2,7 @@ import React, { Fragment } from "react";
 import SCHEDULE from "@/data/schedule";
 import { getPageColorSchemeProps } from "@/utils/getPageColorSchemeProps";
 import { useDocumentTitle } from "usehooks-ts";
-/import Link from "next/link";
 import Footer from "@/components/Footer";
-import useHasExpired from "@/hooks/useHasExpired";
 
 export const getServerSideProps = getPageColorSchemeProps("real-blue");
 
