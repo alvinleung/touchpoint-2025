@@ -6,10 +6,6 @@ import Footer from "@/components/Footer";
 
 export const getServerSideProps = getPageColorSchemeProps("real-blue");
 
-const Schedule = () => {
-  useDocumentTitle("Touchpoint 2025");
-  const hasExpired = useHasExpired("2025-08-22");
-
   return (
     <>
       <div className="px-body pt-nav-height min-h-screen pb-24">
@@ -37,10 +33,7 @@ const Schedule = () => {
           ))}
         </div>
 
-        <div className="fixed bottom-8 left-0 right-0 flex justify-center">
-          {!hasExpired && <PrimaryCTA />}
-        </div>
-      </div>
+        
       <Footer quote="This is, finally, a time to come together, and celebrate, as a community." />
     </>
   );
